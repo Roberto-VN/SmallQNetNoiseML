@@ -112,7 +112,7 @@ H1 = (g * e.dag() + e * g.dag()) / 2
 # Part of control Hamiltonian assosiated with tunneling rate Ωs(t)
 H2 = (e * r.dag() + r * e.dag()) / 2
 
-
+############################################################################################################################### ADAPT THE HAMILTONIANS
 # Hamiltonian for (anti-)correlated noise (non-Markovian)
 def get_H_CN(η, X, Omega_p, Omega_s, pars):
     # Diagonal Hamiltonian
@@ -178,7 +178,7 @@ def get_H_nonQS_ME(η, Omega_p, Omega_s, pars):
 
     return H
 
-
+######################################################################################################################## CHANGE EFFICIENCY TO INTENSITY
 # If noise = 1(by default) this func calculates the population of state |2> at final time tf (efficiency),
 # with perfect projective measurement i.e. considering (anti-)correlated non-Markovian noise
 # If noise = any other number, it calculates the efficiency considering uncorrelated non-Markovian noise
@@ -265,7 +265,7 @@ def eff_Markovian(t, Omega_p, Omega_s, Ωp_max, Ωs_max, η, pars):
 
     return pops3
 
-
+######################################################################################################################## CHANGE EFFICIENCY TO INTENSITY
 # If noise = 1(by default) this func calculates the population of state |2> at finat time tf (efficiency),
 # by averaging over finite number of projective measurements considering correlated noise
 # If noise = 2, the same is done considering not correlated (uncorrelated) noise
@@ -368,8 +368,8 @@ def get_data_CN(
     pdf,
     Omega_p,
     Omega_s,
-    Ωp_max,
-    Ωs_max,
+    Ωp_max,          
+    Ωs_max,          
     ηrange,
     num_trajectories,
     num_samples,
